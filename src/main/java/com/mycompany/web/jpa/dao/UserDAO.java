@@ -27,7 +27,7 @@ public class UserDAO {
         return  query.getResultList();
     }
     
-    public User findById(Long id) {
+    public User findById(Integer id) {
         return em.find(User.class, id);
     }
     

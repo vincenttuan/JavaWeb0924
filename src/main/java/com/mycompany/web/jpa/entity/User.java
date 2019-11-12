@@ -13,17 +13,17 @@ import javax.persistence.Table;
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     @Column(name="name")
     private String name;
     @Column(name="age")
-    private Long age;
+    private Integer age;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -35,11 +35,11 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public Long getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(Long age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
