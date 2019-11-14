@@ -22,8 +22,13 @@
                 身高體重指數（又稱身體質量指數，英文為Body Mass Index，簡稱BMI）是一個計算值，主要用於統計用途。<p/>
                 <%=new Date() %><p/>
             </my:bmi>
-            <p />    
+            <p />
             Good Boy !    
+        </h1>
+        <h1>
+            <my:loop count="3">
+                Java
+            </my:loop>
         </h1>
     </body>
 </html>
