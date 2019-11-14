@@ -7,6 +7,7 @@
   <tag>
       <name>add</name>
       <tag-class>com.mycompany.web.ctag.Add</tag-class>
+      <body-content>empty</body-content>
       <attribute>
           <name>x</name>
           <required>true</required>
