@@ -41,7 +41,7 @@ public class Add implements Tag {
             out.println(String.format("%d + %d = %d", x, y, z));
         } catch (Exception e) {
         }
-        return Tag.SKIP_BODY;
+        return Tag.EVAL_BODY_INCLUDE;
     }
 
     @Override

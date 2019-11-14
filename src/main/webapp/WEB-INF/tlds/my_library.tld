@@ -20,4 +20,20 @@
       </attribute>
   </tag>
   
+  <tag>
+      <name>bmi</name>
+      <tag-class>com.mycompany.web.ctag.BMI</tag-class>
+      <body-content>JSP</body-content>
+      <attribute>
+          <name>h</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>w</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+  </tag>
+  
 </taglib>

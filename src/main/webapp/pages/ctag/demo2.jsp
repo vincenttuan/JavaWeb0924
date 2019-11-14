@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="my" uri="/WEB-INF/tlds/my_library" %>
 <!DOCTYPE html>
@@ -16,6 +17,13 @@
         <h1>
             <my:add x="10" y="20" />
         </h1>
-        
+        <h1>
+            <my:bmi h="170.2" w="60.5">
+                身高體重指數（又稱身體質量指數，英文為Body Mass Index，簡稱BMI）是一個計算值，主要用於統計用途。<p/>
+                <%=new Date() %><p/>
+            </my:bmi>
+            <p />    
+            Good Boy !    
+        </h1>
     </body>
 </html>
