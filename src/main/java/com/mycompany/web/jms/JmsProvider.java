@@ -9,7 +9,7 @@ public class JmsProvider {
          /*The VM transport allows clients to connect to each other inside
                  the VM without the overhead of the network communication. */
         ConnectionFactory connectionFactory =
-                  new ActiveMQConnectionFactory("vm://localhost");
+                  new ActiveMQConnectionFactory("vm://localhost"); // vm://localhost
 
         return connectionFactory;
     }
