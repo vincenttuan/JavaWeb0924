@@ -21,7 +21,7 @@ public class SimpleSearchImage extends SimpleTagSupport {
         Document doc = Jsoup.connect(String.format(google_url, keyword))
                 .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                 .get();
-        String image_url = doc.select("td[style=\"width:25%;word-wrap:break-word\"]").get(1).select("img").attr("src");
+        String image_url = doc.select("td[style=\"width:25%;word-wrap:break-word\"]").get(0).select("img").attr("src");
         out.print(String.format("<img src='%s'>", image_url));
     }
     
