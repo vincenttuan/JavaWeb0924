@@ -1,6 +1,7 @@
 package com.mycompany.web.ctag;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
@@ -11,7 +12,12 @@ public class SimpleSearchImage extends SimpleTagSupport {
     private String keyword;
 
     public void setKeyword(String keyword) {
-        this.keyword = keyword;
+        try {
+            this.keyword = URLEncoder.encode(keyword, "UTF-8");
+        } catch (Exception e) {
+            this.keyword = keyword;
+        }
+        
     }
     
     @Override
