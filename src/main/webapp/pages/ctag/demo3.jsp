@@ -11,6 +11,8 @@
         <h1>
             <my:simple />
         </h1>
-        
+        <h1>
+            <my:simple_search_image keyword="car" />
+        </h1>
     </body>
 </html>

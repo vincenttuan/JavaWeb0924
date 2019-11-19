@@ -61,4 +61,15 @@
         <body-content>empty</body-content>
     </tag>
     
+    <tag>
+        <name>simple_search_image</name>
+        <tag-class>com.mycompany.web.ctag.SimpleSearchImage</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>keyword</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
 </taglib>
