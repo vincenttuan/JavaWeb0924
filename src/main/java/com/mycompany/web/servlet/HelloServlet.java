@@ -1,7 +1,13 @@
 package com.mycompany.web.servlet;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.security.cert.Certificate;
 import java.util.Date;
+import java.util.Scanner;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,5 +31,5 @@ public class HelloServlet extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().print("Put, " + new Date());
     }
-    
+
 }
