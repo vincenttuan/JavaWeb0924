@@ -72,4 +72,11 @@
         </attribute>
     </tag>
     
+    <tag>
+        <name>simple_dyn_add</name>
+        <tag-class>com.mycompany.web.ctag.SimpleDynAdd</tag-class>
+        <body-content>empty</body-content>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+    
 </taglib>

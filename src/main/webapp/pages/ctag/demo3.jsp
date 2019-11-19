@@ -14,5 +14,8 @@
         <h1>
             <my:simple_search_image keyword="car" />
         </h1>
+        <h1>
+            <my:simple_dyn_add x="10" a="20" age="30" />
+        </h1>
     </body>
 </html>
