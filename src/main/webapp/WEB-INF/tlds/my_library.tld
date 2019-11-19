@@ -48,4 +48,15 @@
       </attribute>
   </tag>
   
+  <tag>
+      <name>search</name>
+      <tag-class>com.mycompany.web.ctag.Search</tag-class>
+      <body-content>JSP</body-content>
+      <attribute>
+          <name>marker</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+  </tag>
+  
 </taglib>

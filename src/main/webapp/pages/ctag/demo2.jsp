@@ -30,5 +30,10 @@
                 Java
             </my:loop>
         </h1>
+        <h1>
+            <my:search marker="e">
+                she sell sea shell on the sea shore
+            </my:search>
+        </h1>
     </body>
 </html>

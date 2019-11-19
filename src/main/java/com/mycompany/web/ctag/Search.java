@@ -1,6 +1,10 @@
 package com.mycompany.web.ctag;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTag;
@@ -47,6 +51,13 @@ public class Search implements BodyTag {
     
     @Override
     public int doAfterBody() throws JspException {
+        JspWriter out = bodyContent.getEnclosingWriter();
+        String content = bodyContent.getString();
+        content = content.replaceAll(marker, "<font color=red>" + marker + "</font>");
+        try {
+            out.print(content);
+        } catch (IOException ex) {
+        }
         return Tag.SKIP_BODY;
     }
     
