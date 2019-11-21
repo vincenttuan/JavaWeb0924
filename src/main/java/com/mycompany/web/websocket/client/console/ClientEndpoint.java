@@ -1,10 +1,7 @@
-package com.mycompany.web.websocket.client;
+package com.mycompany.web.websocket.client.console;
 
 import java.net.URI;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.IntStream;
 import javax.websocket.ContainerProvider;
 import javax.websocket.RemoteEndpoint;
 import javax.websocket.Session;

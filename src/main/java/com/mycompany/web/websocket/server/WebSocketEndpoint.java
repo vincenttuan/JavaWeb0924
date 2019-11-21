@@ -1,4 +1,4 @@
-package com.mycompany.web.websocket.service;
+package com.mycompany.web.websocket.server;
 
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;

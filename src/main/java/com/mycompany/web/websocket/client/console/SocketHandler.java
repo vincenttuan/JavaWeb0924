@@ -1,4 +1,4 @@
-package com.mycompany.web.websocket.client;
+package com.mycompany.web.websocket.client.console;
 
 import javax.websocket.CloseReason;
 import javax.websocket.OnClose;
