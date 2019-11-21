@@ -1,19 +1,11 @@
-package com.mycompany.web.jms;
+package com.mycompany.web.jms.queue;
 
-import java.io.PrintWriter;
 import javax.jms.*;
 
 public class ExampleMessageReceiver implements MessageListener {
 
     private Connection con;
-    private PrintWriter out;
 
-    public ExampleMessageReceiver() {
-    }
-
-    public ExampleMessageReceiver(PrintWriter out) {
-        this.out = out;
-    }
     public void startListener () throws JMSException {
         ConnectionFactory factory = JmsProvider.getConnectionFactory();
         this.con = factory.createConnection();
@@ -31,14 +23,10 @@ public class ExampleMessageReceiver implements MessageListener {
         if (message instanceof TextMessage) {
             TextMessage tm = (TextMessage) message;
             try {
-                String msg = String.format("Message received: %s, Thread: %s%n",
+
+                System.out.printf("Message received: %s, Thread: %s%n",
                                   tm.getText(),
                                   Thread.currentThread().getName());
-                System.out.println(msg);
-                if(out != null) {
-                    out.println(msg);
-                    out.flush();
-                }
             } catch (JMSException e) {
                 throw new RuntimeException(e);
             }

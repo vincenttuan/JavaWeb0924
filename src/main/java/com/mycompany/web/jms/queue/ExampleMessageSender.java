@@ -1,4 +1,4 @@
-package com.mycompany.web.jms;
+package com.mycompany.web.jms.queue;
 
 import javax.jms.*;
 
