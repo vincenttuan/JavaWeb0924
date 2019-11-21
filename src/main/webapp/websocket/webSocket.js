@@ -12,7 +12,6 @@ window.onload = function () {
     var webSocket;
     var isConnectSuccess = false;
     var url = 'ws://' + window.location.hostname + ':' + window.location.port + '/JavaWeb0924/websocket';
-        
     //設置登入鈕的動作，登入才可發言
     loginBtn.addEventListener("click", function () {
         //檢查有無輸入名稱
