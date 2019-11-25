@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
+    </head>
+    <body style="padding: 15px">
+        <form class="pure-form" method="post" action="/JavaWeb0924/servlet/upload" enctype="multipart/form-data" target="result">
+            <fieldset>
+                <legend>Upload Form</legend>
+                <input type="text" name="desc" value="Sample">
+                <input type="file" name="uploadfile"><p/>
+                <button type="submit" class="pure-button pure-button-primary">Upload</button>
+            </fieldset>
+        </form>
+        <iframe name="result" width="500" height="500" frameborder="0"></iframe>
+    </body>
+</html>
