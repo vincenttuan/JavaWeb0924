@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Various Form 各種表單練習</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
+    </head>
+    <body style="padding: 15px">
+        <table width="100%">
+            <td valign="top">
+                <form class="pure-form" method="get" action="/JavaWeb0924/servlet/various/bmi">
+                    <fieldset>
+                        <legend>Form Get（BMI）</legend>
+                        <input type="number" placeholder="請輸入身高" name="height"><p/>
+                        <input type="number" placeholder="請輸入體重" name="weight"><p/>
+                        <button type="submit" class="pure-button pure-button-primary">計算</button>
+                    </fieldset>
+                </form>
+            </td>
+            <td valign="top">
+                <form class="pure-form" method="post" action="/JavaWeb0924/servlet/various/post">
+                    <fieldset>
+                        <legend>Form Post（考試註冊）</legend>
+                        <input type="text" placeholder="請輸入學員編號" name="s_name">
+                        <select name="s_exam">
+                            <option value="">考試代號</option>
+                            <option value="1z0-808">OCPJP I (1z0-808)</option>
+                            <option value="1z0-808">OCPJP II (1z0-809)</option>
+                            <option value="1z0-900">OCPJAD (1z0-900)</option>
+                        </select><p/>
+                        可考試時段（可複選）
+                        <input type="checkbox" value="A">上午(A) <input type="checkbox" value="B">下午(B) <input type="checkbox" value="B">晚上(C)<p/>
+                        繳費狀況：
+                        已繳 <input type="radio" name="pay" value="true">
+                        未繳 <input type="radio" name="pay" value="false"><p/>
+                        備註：
+                        <textarea></textarea><p/>
+                        <button type="submit" class="pure-button pure-button-primary">註冊</button>
+                        <button type="reset" class="pure-button pure-button-primary">重置</button>
+                    </fieldset>
+                </form>
+            </td>
+            <td valign="top">
+                <form class="pure-form" method="post" action="/JavaWeb0924/servlet/various/upload" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Form Post（上傳檔案）</legend>
+                        <input type="file" name="uploadfile"><p/>
+                        <input type="file" name="uploadfile"><p/>
+                        說明：<input type="text" name="desc" value="Sample"><p/>
+                        <button type="submit" class="pure-button pure-button-primary">Upload</button>
+                    </fieldset>
+                </form>
+            </td>
+        </table>
+    </body>
+</html>
