@@ -22,20 +22,20 @@
                 <form class="pure-form" method="post" action="/JavaWeb0924/servlet/various/post">
                     <fieldset>
                         <legend>Form Post（考試註冊）</legend>
-                        <input type="text" placeholder="請輸入學員編號" name="s_name">
-                        <select name="s_exam">
+                        <input type="text" placeholder="請輸入學員編號" name="id">
+                        <select name="exam">
                             <option value="">考試代號</option>
                             <option value="1z0-808">OCPJP I (1z0-808)</option>
                             <option value="1z0-808">OCPJP II (1z0-809)</option>
                             <option value="1z0-900">OCPJAD (1z0-900)</option>
                         </select><p/>
                         可考試時段（可複選）
-                        <input type="checkbox" value="A">上午(A) <input type="checkbox" value="B">下午(B) <input type="checkbox" value="B">晚上(C)<p/>
+                        <input type="checkbox" value="A" name="slot">上午(A) <input type="checkbox" value="B" name="slot">下午(B) <input type="checkbox" value="C" name="slot">晚上(C)<p/>
                         繳費狀況：
                         已繳 <input type="radio" name="pay" value="true">
                         未繳 <input type="radio" name="pay" value="false"><p/>
                         備註：
-                        <textarea></textarea><p/>
+                        <textarea name="note"></textarea><p/>
                         <button type="submit" class="pure-button pure-button-primary">註冊</button>
                         <button type="reset" class="pure-button pure-button-primary">重置</button>
                     </fieldset>
