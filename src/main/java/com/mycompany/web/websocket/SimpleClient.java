@@ -1,6 +1,6 @@
 package com.mycompany.web.websocket;
 
-import com.mycompany.web.websocket.client.console.SocketHandler;
+import com.mycompany.web.websocket.client.console.SimpleClientSocketHandler;
 import java.net.URI;
 import java.util.Scanner;
 import javax.websocket.ContainerProvider;
@@ -12,7 +12,7 @@ public class SimpleClient {
 public static void main(String[] args) throws Exception {
         URI uri = new URI("ws://localhost:8080/JavaWeb0924/JavaWeb0924/websocket/server");
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
-        Session session = container.connectToServer(new SocketHandler(), uri);
+        Session session = container.connectToServer(new SimpleClientSocketHandler(), uri);
         RemoteEndpoint.Async remote = session.getAsyncRemote();
         while (true) {
             Scanner scanner = new Scanner(System.in);

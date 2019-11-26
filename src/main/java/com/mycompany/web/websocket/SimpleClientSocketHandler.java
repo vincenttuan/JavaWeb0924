@@ -8,7 +8,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 
 @javax.websocket.ClientEndpoint
-public class SocketHandler {
+public class SimpleClientSocketHandler {
     @OnMessage
     public void onMessage(String message, Session session) {
         System.out.println("Client onMessage() : " + message);
