@@ -15,8 +15,8 @@
                     <legend>Simple Client</legend>
                     <input type="text"   id="message"    value="Hello"   placeholder="請輸入訊息" /> <p />
                     <input type="button" id="openBtn"    value="Open"    class="pure-button pure-button-primary" /> 
-                    <input type="button" id="messageBtn" value="Message" class="pure-button pure-button-primary" /> 
-                    <input type="button" id="closeBtn"   value="Close"   class="pure-button pure-button-primary" /> 
+                    <input type="button" id="messageBtn" value="Message" class="pure-button pure-button-primary" disabled /> 
+                    <input type="button" id="closeBtn"   value="Close"   class="pure-button pure-button-primary" disabled /> 
                 </fieldset>
             </form>
         </div>

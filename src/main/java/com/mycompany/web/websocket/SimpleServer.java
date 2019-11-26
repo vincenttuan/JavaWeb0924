@@ -22,7 +22,7 @@ public class SimpleServer {
     
     @OnClose
     public void onClose(Session session) {
-        
+        System.out.println("關閉連線, sessionID: " + session.getId());
     }
     
     @OnError
