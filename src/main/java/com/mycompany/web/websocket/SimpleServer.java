@@ -14,7 +14,7 @@ public class SimpleServer {
 
     @OnOpen
     public void onOpen(Session session) {
-        System.out.println("Server 接到連線, sessionID: " + session.getId());
+        System.out.println("接到連線, sessionID: " + session.getId());
     }
     
     @OnMessage
