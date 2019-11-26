@@ -46,9 +46,11 @@ window.onload = function() {
         // onerror , 連線錯誤時觸發  
         webSocket.onerror = function (event) {
         };
-
-        
     }
+    
+    console.log('init');
+    setWebSocket();
+    
 }
 
 
