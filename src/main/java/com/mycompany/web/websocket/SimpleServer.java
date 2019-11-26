@@ -1,7 +1,5 @@
 package com.mycompany.web.websocket;
 
-import java.io.IOException;
-import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
 import javax.websocket.OnMessage;
