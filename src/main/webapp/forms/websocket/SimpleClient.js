@@ -7,6 +7,11 @@ window.onload = function() {
         setWebSocket();
     });
     
+    messageBtn.addEventListener("click", function () {
+        var msg = message.value;
+        webSocket.send(msg);
+    });
+    
     closeBtn.addEventListener("click", function () {
         webSocket.close();
     });
@@ -26,6 +31,7 @@ window.onload = function() {
 
         // onmessage , 接收到來自Server的訊息時觸發
         webSocket.onmessage = function (event) {
+            messageDisplay.insertAdjacentHTML('beforeend', event.data + "<br>");
         };
 
         // onclose , 連線關閉時觸發  
@@ -34,6 +40,7 @@ window.onload = function() {
             openBtn.disabled = false;
             messageBtn.disabled = true;
             closeBtn.disabled = true;
+            messageDisplay.innerHTML = '';
         };
         
         // onerror , 連線錯誤時觸發  

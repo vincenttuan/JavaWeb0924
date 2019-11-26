@@ -17,7 +17,9 @@ public class SimpleServer {
     
     @OnMessage
     public void onMessage(String message, Session session) throws Exception {
-        
+        String msg = "sessionID: " + session.getId() + ", msg: " + message;
+        System.out.println(msg);
+        session.getAsyncRemote().sendText(msg);
     }
     
     @OnClose
