@@ -28,6 +28,7 @@ public class SimpleServer {
     @OnClose
     public void onClose(Session session) {
         System.out.println("關閉連線, sessionID: " + session.getId());
+        sessions.remove(session);
         sendAll("可惡 sessionID: " + session.getId() + " 離開了");
     }
     
