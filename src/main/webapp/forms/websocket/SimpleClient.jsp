@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="SimpleClient.js"></script>
     </head>
     <body style="padding: 20px">
         <div>
