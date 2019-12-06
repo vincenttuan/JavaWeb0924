@@ -1,4 +1,4 @@
-package com.mycompany.web.websocket.client.console;
+package com.mycompany.web.websocket;
 
 import javax.websocket.CloseReason;
 import javax.websocket.OnClose;
@@ -8,7 +8,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 
 @javax.websocket.ClientEndpoint
-public class SocketHandler {
+public class SimpleClientSocketHandler {
     @OnMessage
     public void onMessage(String message, Session session) {
         System.out.println("Client onMessage() : " + message);

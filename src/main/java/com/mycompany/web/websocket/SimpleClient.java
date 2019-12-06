@@ -1,4 +1,4 @@
-package com.mycompany.web.websocket.client.console;
+package com.mycompany.web.websocket;
 
 import java.net.URI;
 import java.util.Scanner;
@@ -7,12 +7,12 @@ import javax.websocket.RemoteEndpoint;
 import javax.websocket.Session;
 import javax.websocket.WebSocketContainer;
 
-
-public class ClientEndpoint {
-    public static void main(String[] args) throws Exception {
-        URI uri = new URI("ws://localhost:8080/JavaWeb0924/websocket");
+public class SimpleClient {
+public static void main(String[] args) throws Exception {
+        URI uri = new URI("ws://localhost:8080/JavaWeb0924/websocket/server");
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
-        Session session = container.connectToServer(new SocketHandler(), uri);
+        Session session = container.connectToServer(new SimpleClientSocketHandler(), uri);
+        
         RemoteEndpoint.Async remote = session.getAsyncRemote();
         while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class ClientEndpoint {
             if(msg.equalsIgnoreCase("exit")) {
                 break;
             }
-            remote.sendText("{\"userName\":\"javaclient\", \"message\":\"" + msg + "\"}");
+            remote.sendText(msg);
         }
         
         session.close();

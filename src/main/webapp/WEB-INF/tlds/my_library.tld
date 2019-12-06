@@ -39,7 +39,6 @@
         <body-content>JSP</body-content>
         <attribute>
             <name>count</name>
-            <type>java.lang.Integer</type>
             <required>true</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>

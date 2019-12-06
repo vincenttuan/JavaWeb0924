@@ -1,4 +1,4 @@
-package com.mycompany.web.websocket.server;
+package com.mycompany.web.websocket_chat;
 
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
@@ -11,8 +11,8 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-@ServerEndpoint("/websocket")
-public class WebSocketEndpoint {
+@ServerEndpoint("/websocket/chatserver")
+public class ChatServer {
     // 用來存放WebSocket已連接的Socket
     static CopyOnWriteArraySet<Session> sessions = new CopyOnWriteArraySet<Session>();
     @OnMessage
@@ -51,3 +51,4 @@ public class WebSocketEndpoint {
         }
     }
 }
+

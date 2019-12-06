@@ -65,16 +65,26 @@
             <version>1.8.3</version>
         </dependency>
         
-        <!-- 
-        Project Tyrus
-        JSR 356: Java API for WebSocket - Reference Implementation
-        https://tyrus-project.github.io/dependencies.html
-        -->
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.glassfish.tyrus.bundles</groupId>
             <artifactId>tyrus-standalone-client-jdk</artifactId>
             <version>1.13</version>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>
