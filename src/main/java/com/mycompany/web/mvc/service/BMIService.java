@@ -33,7 +33,8 @@ public class BMIService {
     }
     
     public void delete(int id) {
-        list.remove(id);
+        BMI bmi = list.stream().filter(m -> m.getId() == id).findFirst().get();
+        list.remove(bmi);
     }
     
     public List<BMI> query() {

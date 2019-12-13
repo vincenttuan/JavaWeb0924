@@ -23,6 +23,7 @@ public class BMIServlet extends HttpServlet {
     protected void doHandler(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setCharacterEncoding("utf-8");
+        String bmi_path = getServletContext().getContextPath() + req.getServletPath();
         BMI bmi = new BMI();
         int id = 0;
         String action = "save";
@@ -34,7 +35,7 @@ public class BMIServlet extends HttpServlet {
                 bmi.setHeight(Double.parseDouble(req.getParameter("height")));
                 bmi.setWeight(Double.parseDouble(req.getParameter("weight")));
                 service.save(bmi);
-                resp.sendRedirect("/JavaWeb0924/mvc/bmi/input");
+                resp.sendRedirect(bmi_path + "/input");
                 return;
             case "/get":
                 id = Integer.parseInt(req.getParameter("id"));
@@ -47,12 +48,12 @@ public class BMIServlet extends HttpServlet {
                 bmi.setHeight(Double.parseDouble(req.getParameter("height")));
                 bmi.setWeight(Double.parseDouble(req.getParameter("weight")));
                 service.update(id, bmi);
-                resp.sendRedirect("/JavaWeb0924/mvc/bmi/input");
+                resp.sendRedirect(bmi_path + "/input");
                 return;
             case "/delete":
                 id = Integer.parseInt(req.getParameter("id"));
                 service.delete(id);
-                resp.sendRedirect("/JavaWeb0924/mvc/bmi/input");
+                resp.sendRedirect(bmi_path + "/input");
                 return;
         }
         
@@ -61,6 +62,7 @@ public class BMIServlet extends HttpServlet {
         req.setAttribute("action", action);
         req.setAttribute("bmi", bmi);
         req.setAttribute("list", service.query());
+        req.setAttribute("bmi_path", bmi_path);
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/jsp/bmi_mvc.jsp");
         rd.forward(req, resp);
 

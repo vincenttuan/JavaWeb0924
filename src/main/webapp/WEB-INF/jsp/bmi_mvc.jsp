@@ -36,7 +36,7 @@
     <body style="padding: 10px">
         <table>
             <td valign="top" style="padding: 5px">
-                <form class="pure-form" method="post" action="/JavaWeb0924/mvc/bmi/${action}">
+                <form class="pure-form" method="post" action="${bmi_path}/${action}">
                     <fieldset>
                         <legend>BMI MVC</legend>
                         <input type="number" name="id" value="${bmi.id}" readonly="true"><p/>
@@ -46,7 +46,7 @@
                         <input type="number" placeholder="請輸入身高" name="height" value="${bmi.height}"><p/>
                         <input type="number" placeholder="請輸入體重" name="weight" value="${bmi.weight}"><p/>
                         <button type="submit" class="pure-button pure-button-primary">${action}</button>
-                        <button type="button" class="pure-button pure-button-primary" onclick="location.href = '/JavaWeb0924/mvc/bmi/input';">reset</button>
+                        <button type="button" class="pure-button pure-button-primary" onclick="location.href = '${bmi_path}/input';">reset</button>
                     </fieldset>
                 </form>
                 <table class="pure-table pure-table-bordered">
@@ -57,17 +57,19 @@
                             <th>height</th>
                             <th>weight</th>
                             <th>bmi</th>
+                            <th>delete</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <c:forEach var="bmi" items="${list}">
                             <tr>
-                                <td><a href="/JavaWeb0924/mvc/bmi/get?id=${bmi.id}">${bmi.id}</a></td>
+                                <td><a href="${bmi_path}/get?id=${bmi.id}">${bmi.id}</a></td>
                                 <td>${bmi.sex}</td>
                                 <td>${bmi.height}</td>
                                 <td>${bmi.weight}</td>
                                 <td><fmt:formatNumber value="${bmi.result}" type="number" maxFractionDigits="2"/></td>
+                                <td><a href="${bmi_path}/delete?id=${bmi.id}">刪除</a></td>
                             </tr>
                         </c:forEach>
 
