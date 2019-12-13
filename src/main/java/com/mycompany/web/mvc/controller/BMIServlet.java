@@ -57,8 +57,9 @@ public class BMIServlet extends HttpServlet {
                 return;
         }
         
-        long[] data = service.getData() ;
-        req.setAttribute("data", data);
+        req.setAttribute("data", service.getData());
+        req.setAttribute("data1", service.getData(service.query("男")));
+        req.setAttribute("data2", service.getData(service.query("女")));
         req.setAttribute("action", action);
         req.setAttribute("bmi", bmi);
         req.setAttribute("list", service.query());

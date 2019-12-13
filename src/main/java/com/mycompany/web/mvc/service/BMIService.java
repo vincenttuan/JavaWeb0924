@@ -3,6 +3,7 @@ package com.mycompany.web.mvc.service;
 import com.mycompany.web.mvc.model.BMI;
 import java.util.ArrayList;
 import java.util.List;
+import static java.util.stream.Collectors.toList;
 
 public class BMIService {
     private static List<BMI> list = new ArrayList<>();
@@ -41,13 +42,20 @@ public class BMIService {
         return list;
     }
     
+    public List<BMI> query(String sex) {
+        return list.stream().filter(b -> b.getSex().equals(sex)).collect(toList());
+    }
+    
     public long[] getData() {
+        return getData(list);
+    }
+    
+    public long[] getData(List<BMI> list) {
         long[] data = {0, 0, 0, 0};
         data[3] = list.stream().filter(bmi -> bmi.getResult() < 18.5).count();
         data[2] = list.stream().filter(bmi -> bmi.getResult() >= 28).count();
         data[1] = list.stream().filter(bmi -> bmi.getResult() >= 24 && bmi.getResult() <= 27.9).count();
         data[0] = list.stream().count() - data[3] - data[2] - data[0];
-        
         return data;
     }
 }

@@ -12,9 +12,10 @@
         <script type="text/javascript">
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(drawChart);
+            google.charts.setOnLoadCallback(drawChart1);
+            google.charts.setOnLoadCallback(drawChart2);
 
             function drawChart() {
-
                 var data = google.visualization.arrayToDataTable([
                     ['Level', 'BMI'],
                     ['標準', ${data[0]}],
@@ -28,6 +29,42 @@
                 };
 
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+                chart.draw(data, options);
+            }
+            
+            function drawChart1() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Level', 'BMI'],
+                    ['標準', ${data1[0]}],
+                    ['超重', ${data1[1]}],
+                    ['肥胖', ${data1[2]}],
+                    ['過低', ${data1[3]}]
+                ]);
+
+                var options = {
+                    title: 'BMI 資料統計（男）'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+                chart.draw(data, options);
+            }
+            
+            function drawChart2() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Level', 'BMI'],
+                    ['標準', ${data2[0]}],
+                    ['超重', ${data2[1]}],
+                    ['肥胖', ${data2[2]}],
+                    ['過低', ${data2[3]}]
+                ]);
+
+                var options = {
+                    title: 'BMI 資料統計（女）'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
 
                 chart.draw(data, options);
             }
@@ -77,7 +114,22 @@
                 </table>
             </td>
             <td valign="top" style="padding: 5px">
-                <div id="piechart" style="width: 900px; height: 500px;"></div>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <div id="piechart" style="width: 700px; height: 300px;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="piechart1" style="width: 350px; height: 200px;"></div>
+                        </td>
+                        <td>
+                            <div id="piechart2" style="width: 350px; height: 200px;"></div>
+                        </td>
+                    </tr>
+                </table>
+                
             </td>
         </table>
     </body>
