@@ -41,7 +41,7 @@ public class LoginFilter extends HttpFilter {
                 Cookie cookie_username = new Cookie("username", username);
                 Cookie cookie_password = new Cookie("password", password);
                 Cookie cookie_remember = new Cookie("remember", "checked");
-                cookie_username.setMaxAge(7 * 24 * 60 * 60);
+                cookie_username.setMaxAge(7 * 24 * 60 * 60); // 單位/秒
                 cookie_password.setMaxAge(7 * 24 * 60 * 60);
                 cookie_remember.setMaxAge(7 * 24 * 60 * 60);
                 resp.addCookie(cookie_username);
