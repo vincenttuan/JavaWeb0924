@@ -22,6 +22,11 @@ public class OrderServlet extends HttpServlet {
     
     protected void doHandle(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
+        
+        if(session.getAttribute("carts") == null) {
+            session.setAttribute("carts", new LinkedHashMap<Date, Integer>()); 
+        }
+        
         LinkedHashMap<Date, Integer> carts = (LinkedHashMap)session.getAttribute("carts");
         int amount = 0;
         String message = "";

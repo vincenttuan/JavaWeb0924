@@ -11,11 +11,11 @@
             <fieldset>
                 <legend>Login Page</legend>
 
-                <input type="text" placeholder="username" name="username"><p/>
-                <input type="password" placeholder="Password" name="password"><p/>
+                <input type="text" placeholder="username" name="username" value="${cookie.username.getValue()}"><p/>
+                <input type="password" placeholder="Password" name="password" value="${cookie.password.getValue()}"><p/>
 
                 <label for="remember">
-                    <input id="remember" type="checkbox" name="remember"> Remember me
+                    <input id="remember" type="checkbox" name="remember" ${cookie.remember.getValue()}> Remember me
                 </label><p/>
 
                 <button type="submit" class="pure-button pure-button-primary">Sign in</button>
