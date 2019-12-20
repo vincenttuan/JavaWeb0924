@@ -19,6 +19,7 @@
                 </label><p/>
 
                 <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+                <font color="red">${message}</font>
             </fieldset>
         </form>
     </body>

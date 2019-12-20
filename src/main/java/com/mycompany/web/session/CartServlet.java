@@ -20,9 +20,6 @@ import javax.servlet.http.HttpSession;
 public class CartServlet extends HttpServlet {
     
     protected void doHandle(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(false);
-        LinkedHashMap<Date, Integer> carts = (LinkedHashMap)session.getAttribute("cartList");
-        req.setAttribute("carts", carts);
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/jsp/session/cart.jsp");
         rd.forward(req, resp);
     }

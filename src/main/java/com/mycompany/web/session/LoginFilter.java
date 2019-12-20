@@ -50,10 +50,10 @@ public class LoginFilter extends HttpFilter {
             }
 
             if (pass) {
-                session = req.getSession(true);
                 session.setAttribute("username", username);
             } else {
                 session.invalidate();
+                req.setAttribute("message", "登入失敗或請重新登入");
                 RequestDispatcher rd = getServletContext().getRequestDispatcher("/WEB-INF/jsp/session/login.jsp");
                 rd.forward(req, resp);
                 return;
