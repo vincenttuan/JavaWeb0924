@@ -15,7 +15,6 @@
     </properties>
     
     <dependencies>
-        
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -39,12 +38,6 @@
             <groupId>org.apache.derby</groupId>
             <artifactId>derbyclient</artifactId>
             <version>10.10.1.1</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.apache.openjpa</groupId>
-            <artifactId>openjpa</artifactId>
-            <version>3.1.0</version>
         </dependency>
         
         <dependency>
@@ -84,6 +77,14 @@
             <artifactId>mail</artifactId>
             <version>1.4</version>
         </dependency>
+        
+        <!-- JPA -->
+        <dependency>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        
 
     </dependencies>
 

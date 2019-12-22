@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 // please use TomEE
-@WebServlet("/jpa_user/*")
+@WebServlet("/jpa/*")
 public class UserServlet extends HttpServlet {
 
     @Override

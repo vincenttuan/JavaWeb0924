@@ -23,7 +23,7 @@
                 var user_id   = document.getElementById("update_user_id").value;
                 var user_name = document.getElementById("user_name").value;
                 var user_age  = document.getElementById("user_age").value;
-                var path = "../jpa_user/user/" + user_id;
+                var path = "../jpa/user/" + user_id;
                 xhttp.open("PUT", path, true);
                 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 var args = "user_name=" + user_name + "&user_age=" + user_age;
@@ -32,7 +32,7 @@
             
             function deleteUser() {
                 var user_id   = document.getElementById("delete_user_id").value;
-                var path = "../jpa_user/user/" + user_id;
+                var path = "../jpa/user/" + user_id;
                 xhttp.open("DELETE", path, true);
                 xhttp.send();
             }
@@ -44,7 +44,7 @@
             <tr>
                 <td valign="top">
                     <!--1. User Form (POST - Insert) -->
-                    <form class="pure-form" method="post" action="../jpa_user/user">
+                    <form class="pure-form" method="post" action="../jpa/user">
                         <fieldset>
                             <legend>1. User Form (POST - Insert)</legend>
                             <input type="text" placeholder="請輸入人名" value="John" name="user_name"><p/>
@@ -55,13 +55,13 @@
                 </td>
                 <td valign="top">
                     <!--2. User Form (GET - Query) -->
-                    <form class="pure-form" method="get" action="../jpa_user/users">
+                    <form class="pure-form" method="get" action="../jpa/users">
                         <fieldset>
                             <legend>2.1 User Form (GET - Query)</legend>
                             <button type="submit" class="pure-button pure-button-primary">全部查詢</button>
                         </fieldset>
                     </form>
-                    <form class="pure-form" method="get" action="../jpa_user/user/2">
+                    <form class="pure-form" method="get" action="../jpa/user/1">
                         <fieldset>
                             <legend>2.2 User Form (GET - Get)</legend>
                             <button type="submit" class="pure-button pure-button-primary">單筆查詢</button>
