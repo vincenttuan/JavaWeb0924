@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +25,6 @@ public class AuthCodeServlet extends HttpServlet {
         
         //將驗證碼保留在session中，便於以後驗證
         req.getSession().setAttribute("authCode", authCode);  
-        
         try {
             //發送/寫入圖片資料  
             ImageIO.write(getAuthCodeImage(authCode), "JPEG", resp.getOutputStream());
@@ -63,9 +63,9 @@ public class AuthCodeServlet extends HttpServlet {
             g.drawString(authCode.charAt(3)+"", 65, 27); // code, x, y    
         
         // 干擾線條
-        Random random = new Random();
         g.setColor(Color.BLUE);
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 20; i++) {
+            ThreadLocalRandom random = ThreadLocalRandom.current();
             int x = random.nextInt(80);
             int y = random.nextInt(30);
             int x2 = random.nextInt(80);
