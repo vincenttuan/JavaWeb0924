@@ -5,8 +5,6 @@ import com.mycompany.web.jpa.entity.Customer;
 import com.mycompany.web.jpa.util.JPAUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 public class CustomerService {
     
